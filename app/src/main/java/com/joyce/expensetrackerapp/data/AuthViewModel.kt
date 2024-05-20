@@ -1,7 +1,9 @@
 package com.joyce.expensetrackerapp.data
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.widget.Toast
+import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -10,7 +12,7 @@ import com.joyce.expensetrackerapp.navigation.ROUTE_HOME
 import com.joyce.expensetrackerapp.navigation.ROUTE_LOGIN
 import com.joyce.expensetrackerapp.navigation.ROUTE_REGISTER
 
-class AuthViewModel(var navController: Int, var context: String){
+class AuthViewModel(var navController: NavHostController, var context: Context){
 
     var mAuth: FirebaseAuth
     val progress: ProgressDialog
