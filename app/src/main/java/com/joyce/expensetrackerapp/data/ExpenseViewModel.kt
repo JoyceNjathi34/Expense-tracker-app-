@@ -9,7 +9,7 @@ import com.joyce.expensetrackerapp.model.Expense
 import com.joyce.expensetrackerapp.navigation.ROUTE_LOGIN
 
 
-class productviewmodel(var navController: NavHostController, var context: Context) {
+class ExpenseViewModel(var navController: NavHostController, var context: Context) {
     var authRepository: AuthViewModel
     var progress: ProgressDialog
 
@@ -24,7 +24,7 @@ class productviewmodel(var navController: NavHostController, var context: Contex
     }
 
 
-    fun saveProduct(
+    fun saveExpense(
         expenseName: String,
         expenseQuantity: String,
         expenseCategory: String,
