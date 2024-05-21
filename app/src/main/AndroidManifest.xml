@@ -17,12 +17,6 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ExpenseTrackerApp">
-        <androix.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:itemCount="5"
-            tools:listitem="@layout/card_view_design" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
