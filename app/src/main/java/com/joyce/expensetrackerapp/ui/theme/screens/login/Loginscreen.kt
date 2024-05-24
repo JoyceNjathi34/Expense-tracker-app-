@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -71,14 +72,16 @@ fun LoginScreen(navController: NavHostController) {
         Button(onClick = {
             val mylogin= AuthViewModel(navController, context )
             mylogin.login(email.text.trim(),pass.text.trim())
-        }, modifier = Modifier.fillMaxWidth()) {
+        }, modifier = Modifier.fillMaxWidth(),
+            colors=ButtonDefaults.buttonColors(Color.Black)) {
             Text(text = "Log In")
         }
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(onClick = {
             navController.navigate(ROUTE_REGISTER)
-        }, modifier = Modifier.fillMaxWidth()) {
+        }, modifier = Modifier.fillMaxWidth(),
+            colors= ButtonDefaults.buttonColors(Color.Black)) {
             Text(text = "Don't have account? Click to Register")
         }
 

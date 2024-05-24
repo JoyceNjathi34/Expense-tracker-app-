@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -88,7 +89,8 @@ fun AddTransaction(navController: NavHostController) {
 
 
 
-        }) {
+        },modifier=Modifier.padding(6.dp),
+            colors= ButtonDefaults.buttonColors(Color.Black)) {
             Text(text = "Save")
         }
 

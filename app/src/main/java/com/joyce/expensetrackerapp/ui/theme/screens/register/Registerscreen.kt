@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -78,7 +79,8 @@ fun Registerscreen(navController: NavHostController){
       Button(onClick = {
           val myregister= AuthViewModel(navController,context)
           myregister.signup(email.text.trim(),pass.text.trim(),confirmpass.text.trim())
-      },modifier=Modifier.fillMaxWidth()) {
+      },modifier=Modifier.fillMaxWidth(),
+          colors= ButtonDefaults.buttonColors(Color.Black)) {
           Text(text = "Register")
           
       }
@@ -86,7 +88,8 @@ fun Registerscreen(navController: NavHostController){
       
       Button(onClick = {
           navController.navigate(ROUTE_LOGIN)
-      },modifier=Modifier.fillMaxWidth()) {
+      },modifier=Modifier.fillMaxWidth(),
+          colors=ButtonDefaults.buttonColors(Color.Black)) {
           Text(text = "Have an Account? Click to Login")
       }
   }

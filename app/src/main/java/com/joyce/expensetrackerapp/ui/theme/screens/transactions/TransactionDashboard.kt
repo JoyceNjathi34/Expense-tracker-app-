@@ -4,9 +4,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,16 +27,17 @@ import com.joyce.expensetrackerapp.navigation.ROUTE_ADD_TRANSACTION
 
 @Composable
 fun TransactionDashboard(navController:NavHostController){
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Blue),
+            .background(Color.Cyan),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         var context= LocalContext.current
         //  var transactionData=TransactionViewModel(navController, context)
         Text(
-            text = " Expense Dashboard",
+            text = " Transaction Dashboard",
             fontSize = 30.sp,
             fontFamily = FontFamily.Serif,
             color = Color.Black,
@@ -45,7 +48,8 @@ fun TransactionDashboard(navController:NavHostController){
         Spacer(modifier = Modifier.height(100.dp))
         Button(onClick = {
             navController.navigate(ROUTE_ADD_TRANSACTION)
-        }, modifier = Modifier.fillMaxSize()) {
+        }, modifier = Modifier.fillMaxWidth(),
+            colors=ButtonDefaults.buttonColors(Color.Black)) {
             Text(text = "Add Transaction")
 
         }
