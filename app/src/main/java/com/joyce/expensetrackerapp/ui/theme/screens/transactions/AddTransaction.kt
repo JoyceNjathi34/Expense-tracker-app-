@@ -2,6 +2,7 @@ package com.joyce.expensetrackerapp.ui.theme.screens.transactions
 
 
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -38,7 +39,8 @@ import com.joyce.expensetrackerapp.data.TransactionViewModel
 
 @Composable
 fun AddTransaction(navController: NavHostController) {
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(modifier = Modifier.fillMaxSize()
+        .background(Color.Black),
         horizontalAlignment = Alignment.CenterHorizontally) {
         var context = LocalContext.current
         Text(
@@ -90,7 +92,7 @@ fun AddTransaction(navController: NavHostController) {
 
 
         },modifier=Modifier.padding(6.dp),
-            colors= ButtonDefaults.buttonColors(Color.Black)) {
+            colors= ButtonDefaults.buttonColors(Color.Magenta)) {
             Text(text = "Save")
         }
 

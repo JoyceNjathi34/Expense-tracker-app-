@@ -30,7 +30,7 @@ import com.joyce.expensetrackerapp.navigation.ROUTE_DASHBOARD
 fun HomeDashboard(navController: NavHostController) {
   Box(modifier=Modifier.fillMaxSize()){
       Image(
-          painter= painterResource(id= R.drawable.don),
+          painter= painterResource(id= R.drawable.log),
           contentDescription="Home background",
           contentScale= ContentScale.FillBounds,
           modifier=Modifier.matchParentSize()

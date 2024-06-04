@@ -1,9 +1,7 @@
 package com.joyce.expensetrackerapp.ui.theme.screens.dashboards
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,9 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -26,20 +22,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.joyce.expensetrackerapp.R
 import com.joyce.expensetrackerapp.navigation.ROUTE_EXPENSE_DASHBOARD
 import com.joyce.expensetrackerapp.navigation.ROUTE_TRANSACTION_DASHBOARD
 
 @Composable
 fun Dashboard(navController:NavHostController) {
-
-    Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = R.drawable.log),
-            contentDescription = "Home background",
-            contentScale = ContentScale.FillBounds,
-            modifier = Modifier.matchParentSize()
-        )
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -79,7 +66,7 @@ fun Dashboard(navController:NavHostController) {
 
         }
     }
-}
+
 
 @Preview
 @Composable

@@ -116,7 +116,7 @@ fun AddExpenses(navController: NavHostController) {
 
             },
                 modifier=Modifier.padding(6.dp),
-                colors= ButtonDefaults.buttonColors(Color.Black)) {
+                colors= ButtonDefaults.buttonColors(Color.Magenta)) {
                 Text(text = "Save")
             }
 
